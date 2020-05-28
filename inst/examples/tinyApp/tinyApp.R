@@ -102,5 +102,4 @@ server = function(input, output, session) {
 
 } # server
 #----------------------------------------------------------------------------------------------------
-browseURL("http://localhost:6789")
 runApp(shinyApp(ui=ui,server=server), port=6789)
