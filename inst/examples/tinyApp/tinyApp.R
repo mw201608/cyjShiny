@@ -62,7 +62,7 @@ server = function(input, output, session) {
 
    observeEvent(input$visualStyleSelector, ignoreInit=TRUE, {
       newStyleFile <- input$visualStyleSelector
-      printf("newStyle: %s", newStyleFile)
+      sprintf("newStyle: %s", newStyleFile)
       loadStyleFile(newStyleFile)
       })
 
@@ -74,7 +74,7 @@ server = function(input, output, session) {
 
    output$value <- renderPrint({ input$action })
    output$cyjShiny <- renderCyjShiny({
-     printf("renderCyjShiny")
+     print("renderCyjShiny")
      print(graph.json)
      print(class(graph.json))
      cyjShiny(graph=graph.json, layoutName="cola", styleFile="basicStyle.js")
